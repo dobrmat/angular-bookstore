@@ -1,17 +1,21 @@
 <!doctype html>
 <html lang="pl" ng-app="bookstoreApp">
 <head>
-  <meta charset="utf-8"/>
-  <title>Online Bookstore</title>
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="js/app.js"></script>
+    <meta charset="utf-8"/>
+    <title>Online Bookstore</title>
+    <script src="bower_components/angular/angular.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
 </head>
 <body>
-	<ul>
-		<li>Tytuł: {{title}}</li>
-		<li>Autor: {{author}}</li>
-	</ul>
-	<label for="edTitle">Tytuł:</label>
-	<input id = "edTitle" ng-model="title"/>
+<div ng-controller="BooksController">
+    <ul>
+        <li>Tytuł: {{title}}</li>
+        <li>Autor: {{author}}</li>
+    </ul>
+    <label for="edTitle">Tytuł:</label>
+    <input id="edTitle" ng-model="title"/>
+</div>
 </body>
 </html>
