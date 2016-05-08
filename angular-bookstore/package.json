@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1",
+  "private": true,
+  "name": "angular-bookstore",
+  "description": "A tutorial application for AngularJS",
+  "repository": "https://github.com/dobrmat/angular-bookstore",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.9.0",
+    "bower": "^1.7.9"
+  },
+  "scripts": {
+    "start": "http-server -a 0.0.0.0 -p 8989"
+  }
+}
