@@ -1,6 +1,9 @@
-bookstoreApp.controller("BooksController", ["$scope","bookService", function($scope, bookService){
-    var books = [];
-    books.push({title:bookService("W pustyni i w puszczy"), author:"Henryk Sienkiewicz"});
-    books.push({title:"Pan Tadeusz", author:"Adam Mickiewicz"});
-    $scope.books = books;
+var bookControllers = angular.module('bookControllers',[]);
+
+bookControllers.controller("BooksController", ["$scope","bookService", "booksProvider", function($scope, bookService, booksProvider){
+    $scope.books = booksProvider;
+}]);
+
+bookControllers.controller("BookDetailController", ["$scope",'$routeParams',"bookService", "booksProvider", function($scope,$routeParams, bookService, booksProvider){
+    $scope.book = booksProvider[$routeParams.bookNo]
 }]);

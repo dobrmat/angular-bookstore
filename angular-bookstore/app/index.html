@@ -4,21 +4,15 @@
     <meta charset="utf-8"/>
     <title>Online Bookstore</title>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
 
     <script src="js/app.js"></script>
     <script src="js/services.js"></script>
     <script src="js/controllers.js"></script>
 </head>
 <body>
-<div ng-controller="BooksController">
-    <div ng-repeat="book in books">
-        <ul>
-            <li>Tytuł: {{book.title}}</li>
-            <li>Autor: {{book.author}}</li>
-        </ul>
-        <label for="edTitle">Tytuł:</label>
-        <input id="edTitle" ng-model="book.title"/>
-    </div>
-</div>
+<div>poczatek</div>
+<div ng-view></div>
+<div>koniec</div>
 </body>
 </html>
