@@ -1,4 +1,6 @@
-bookstoreApp.controller("BooksController", ["$scope", function($scope){
-    $scope.title = "W pustyni i w puszczy";
-    $scope.author = "Henryk Sienkiewicz";
+bookstoreApp.controller("BooksController", ["$scope","bookService", function($scope, bookService){
+    var books = [];
+    books.push({title:bookService("W pustyni i w puszczy"), author:"Henryk Sienkiewicz"});
+    books.push({title:"Pan Tadeusz", author:"Adam Mickiewicz"});
+    $scope.books = books;
 }]);
