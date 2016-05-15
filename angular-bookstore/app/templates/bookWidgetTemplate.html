@@ -1,4 +1,6 @@
 <ul>
-    <li><a href="/app/index.html#/books/{{$index}}">Tytuł: {{stala+book.title+stala}}</a></li>
-    <li>Autor: {{book.author}}</li>
+    <li><a href="{{address}}">Tytuł: {{bookItem.title}}</a></li>
+    <li>Autor: {{bookItem.author}}</li>
 </ul>
+<label for="edTitle">Tytuł:</label>
+<input id="edTitle" ng-model="bookItem.title"/>

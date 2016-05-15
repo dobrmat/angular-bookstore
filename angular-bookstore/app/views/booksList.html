@@ -1,7 +1,5 @@
 <div>
     <div ng-repeat="book in books">
-        <book-widget></book-widget>
-        <label for="edTitle">Tytuł:</label>
-        <input id="edTitle" ng-model="book.title"/>
+        <book-widget bw-href="/app/index.html#/books/{{$index}}" book-item="book"></book-widget>
     </div>
 </div>
