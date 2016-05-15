@@ -1,5 +1,6 @@
 <div>
     <div ng-repeat="book in books">
+        <div book-widget=""></div>
         <ul>
             <li><a href="/app/index.html#/books/{{$index}}">Tytuł: {{stala+book.title+stala}}</a></li>
             <li>Autor: {{book.author}}</li>
