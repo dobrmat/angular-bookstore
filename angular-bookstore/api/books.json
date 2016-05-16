@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "title": "Pan Tadeusz",
+      "author": "Adam Mickiewicz",
+      "price": 33.99
+    },
+    {
+      "title": "W pustyni i w puszczy",
+      "author": "Henryk Sienkiewicz",
+      "price": 50.22
+    }
+  ]
+}

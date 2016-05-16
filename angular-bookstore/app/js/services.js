@@ -1,19 +1,20 @@
-bookstoreApp.factory("bookService", ["stala", function(stala) {
-    var bookService = function(title) {
-        return stala+title+stala
+bookstoreApp.factory("bookService", ["$timeout", "stala", function ($timeout, stala) {
+    var bookService = function (title) {
+        return stala + title + stala
     };
     return bookService;
 }]);
 
-bookstoreApp.factory("stala", [function() {
+bookstoreApp.factory("stala", [function () {
     return "----";
 }]);
 
 
-bookstoreApp.factory("booksProvider", [function() {
+bookstoreApp.factory("booksProvider", ["$timeout", "$http", function ($timeout, $http) {
     var books = [];
-    books.push({title:"W pustyni i w puszczy", author:"Henryk Sienkiewicz", price: 50.22});
-    books.push({title:"Pan Tadeusz", author:"Adam Mickiewicz", price: 33.99});
-
+    $timeout(function() {
+    return $http.get("/api/books.json").then(function (response) {
+        books.push.apply(books, response.data.items);
+    })},2000);
     return books;
 }]);
