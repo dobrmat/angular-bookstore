@@ -5,6 +5,11 @@ bookControllers.directive("bookWidget", [function() {
         scope: {
             address: '@bwHref',
             bookItem: '=bookItem'
+        },
+        link: function(scope, element, attrs) {
+            scope.showMsgBox = function(msg) {
+                alert(msg);
+            }
         }
     }
 }]);

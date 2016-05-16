@@ -1,6 +1,6 @@
 <ul>
     <li><a href="{{address}}">Tytuł: {{bookItem.title}}</a></li>
-    <li>Autor: {{bookItem.author}}</li>
+    <li><div ng-click="showMsgBox('kliknąłeś')">Autor: {{bookItem.author}}</div></li>
 </ul>
 <label for="edTitle">Tytuł:</label>
 <input id="edTitle" ng-model="bookItem.title"/>
